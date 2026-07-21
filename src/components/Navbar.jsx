@@ -63,7 +63,7 @@ const Navbar = memo(function Navbar() {
         </ul>
 
         <a
-          href="/Abdalrahman_CV.pdf"
+          href="/Abdalrahman_Ali_CV.pdf"
           target="_blank"
           rel="noreferrer"
           className="btn btn-outline"

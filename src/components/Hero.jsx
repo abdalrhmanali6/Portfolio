@@ -46,13 +46,13 @@ export default function Hero() {
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </a>
-          <a href="/Abdalrahman_CV.pdf" download className="btn btn-outline" id="hero-cta-cv-download">
+          <a href="/Abdalrahman_Ali_CV.pdf" download className="btn btn-outline" id="hero-cta-cv-download">
             Download CV
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
             </svg>
           </a>
-          <a href="/Abdalrahman_CV.pdf" target="_blank" rel="noreferrer" className="btn btn-outline" id="hero-cta-cv-view">
+          <a href="/Abdalrahman_Ali_CV.pdf" target="_blank" rel="noreferrer" className="btn btn-outline" id="hero-cta-cv-view">
             View CV
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
