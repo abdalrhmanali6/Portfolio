@@ -2,6 +2,8 @@ import { memo, useMemo } from 'react'
 import useFadeUp from '../hooks/useFadeUp'
 import Roomify from "../assets/Roomify.webp"
 import CinemaVerse from "../assets/Movie.webp"
+import LolQuiz from "../assets/LolQuiz.svg"
+
 // ── Icons — module-level, created once ───────────────────────────────────────
 const LiveIcon = (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -38,20 +40,20 @@ const PROJECTS = [
     gitHref: 'https://github.com/abdalrhmanali6/Movie-Search-Website',
   },
   {
-    title: 'Pet Marketplace',
-    description: 'A full-stack pet marketplace platform enabling seamless trading, adopting, and connecting pet lovers. Coming soon.',
-    tags: [{ label: 'Next.js', cls: 'tag-blue' }, { label: 'React', cls: 'tag-blue' }, { label: 'MongoDB', cls: 'tag-cyan' }],
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAvbnXMV5H9jsGkkygjD7461VKwwaSnB97KtI7NOPSaWTMnz4myfQSpPz2Ixyv5fHS7M-eUdh23Z9mQ0fxVCB36xtbe_plAFrOkEh0yzuIKQnvWi7VZdhygBCeMcTgAgK1cnoIGrB9XYODQIXx-fiocru8Dgv0oJjH71IyE-mVzOWnKOa98jNatBdftncrBAsvWfuLgPNpt--bp55kOo0gnBsSDgoEe2xsF-cDHDJdGtJNcqU8bGdrV4WTJf0smtfgIQltpvbXIuQ',
-    imgAlt: 'Pet marketplace platform dashboard preview',
+    title: 'LoL Quiz App',
+    description: 'An interactive League of Legends trivia quiz application built with React, TypeScript, and Tailwind CSS. Test your lore knowledge across 50 questions with real-time score tracking.',
+    tags: [{ label: 'React', cls: 'tag-blue' }, { label: 'TypeScript', cls: 'tag-blue' }, { label: 'Tailwind CSS', cls: 'tag-cyan' }],
+    img: LolQuiz,
+    imgAlt: 'League of Legends Quiz Application preview',
     glow: 'blue',
-    liveHref: '#',
-    gitHref: '#',
+    liveHref: 'https://lolquiz-sigma.vercel.app/',
+    gitHref: 'https://github.com/abdalrhmanali6/LOL-Quiz',
   },
 ]
 
 // ── ProjectCard — memoised: only re-renders when props change ────────────────
 const ProjectCard = memo(function ProjectCard({ project, delay }) {
-  const isComingSoon = project.title === 'Pet Marketplace'
+  const isComingSoon = Boolean(project.isComingSoon || project.liveHref === '#')
 
   // Memoize tag badges — they only depend on project.tags (stable module-level data)
   const tagBadges = useMemo(
